@@ -1,0 +1,96 @@
+
+/* ============== header section ============== */
+header {
+    background: #353535; /*obliger de tricher car mon header me laisse un blanc après l'image avant navbar ??*/
+}
+.topbar-block-isBlack {
+    display: flex;
+    place-items: center;
+    background: black;
+}
+
+.topbar-wrapper-logo-title {
+    display: flex;
+    margin-left: 20rem;
+}
+
+
+.topbar-block-logo {
+    width: 100px;
+    height: 100px;
+    margin: 1rem 0;
+    background: white;
+    border-radius: 50%;
+}
+
+.topbar-has-title {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    /* à cause du column */
+    padding: 1rem 0 1rem 2rem;
+    color: white;
+}
+
+.topbar-has-title span:nth-child(1) {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.topbar-has-title span:nth-child(2) {
+    color: red;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 5px 0;
+}
+
+.topbar-has-title span:nth-child(3) {
+    font-size: 20px;
+    text-align: end;
+}
+
+.topbar-link-right {
+    position: relative;
+    font-size: 2.5rem;
+}
+
+.topbar-link-right::after {
+    content: "";
+    width: 41px;
+    height: 2px;
+    color: red;
+    position: absolute;
+    background: red;
+    top: 40px;
+    left: 14px;
+    opacity: 0;
+}
+
+.topbar-link-right:hover::after {
+    opacity: 1;
+}
+
+.top-wrapper-link-media {
+    width: 63%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.topbar-has-media-right {
+    color: white;
+    margin-left: 10px;
+}
+
+.topbar-has-media-right span:nth-child(1) {
+    padding: 0 1rem;
+}
+
+.topbar-has-media-right span>* {
+    font-size: 40px;
+}
+
+/* ====== MAIN LOGO ===== */
+.topbar-media-item-img {
+    width: 100%;
+}
