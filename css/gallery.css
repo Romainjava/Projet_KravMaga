@@ -4,13 +4,16 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24vmax, 42vmin));
     justify-content: center;
+    animation: transition-is-none .8s ease-out;
+    
+
 }
 
 .gallery-grid-wrapper>* {
     /* place-self: center; */
     /* Permet de pas stretch l'image et lui donner de taille */
     text-align: center;
-
+    
 }
 
 
@@ -50,18 +53,19 @@
 
 .gallery-collapsed-menu {
     background: rgb(143, 18, 18);
+    color: white;
     overflow: hidden;
     transition: max-height .3s;
     max-height: 0;
 }
 
-.gallery-collapsed-menu a {
+.gallery-collapsed-menu li {
     display: block;
     padding: 20px 15px;
     position: relative;
 }
 
-.gallery-collapsed-menu a:before {
+.gallery-collapsed-menu li:before {
     content: "";
     position: absolute;
     width: 6px;
@@ -73,10 +77,26 @@
     opacity: 0;
 }
 
-.gallery-collapsed-menu a:hover:before {
+.gallery-collapsed-menu li:hover:before {
     opacity: 1;
+    
 }
 /* permet d'activé la propriété que quand les deux valeurs sont active */
 .gallery-collapsed-menu.is-active {
     max-height: 10em;
+    cursor: pointer;
+}
+
+
+/* trie par année */
+.is-none {
+    display: none;
+}
+
+@keyframes transition-is-none {
+    0% {
+        opacity: 0.5;
+    }100% {
+        opacity: 1;
+    }
 }
