@@ -1,6 +1,6 @@
 /* ============= navbar ========== */
 :root {
-    --main-color-icon: #1359cb;
+    --main-color-icon: rgb(143, 18, 18);
 }
 .navbar {
     background: #353535;
