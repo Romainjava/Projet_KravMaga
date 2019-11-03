@@ -1,7 +1,9 @@
 /* ============= navbar ========== */
+/* ======== MAJ FIX Grosse erreur lors de ma conceptualisation j'ai séparé les h3 gallery evenement etc du conteneur de l'image rond qui render la chose non responsiv ============*/
 :root {
     --main-color-icon: rgb(143, 18, 18);
 }
+
 .navbar {
     background: #353535;
 }
@@ -11,13 +13,15 @@
     flex-direction: column;
     place-content: center;
     place-items: center;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 .navbar-wrapper-link {
     display: flex;
-    place-content: center;
+    place-content: space-around;
     place-items: center;
+    width: 90%;
+
 }
 
 .navbar-wrapper-link>* {
@@ -27,18 +31,21 @@
     height: 100px;
     background: whitesmoke;
     border-radius: 50%;
-    margin: 0 13rem;
+    text-align: center;
+    /* Nota bene NE JAMAIS USE DE MARGIN POUR ESPACER DES ELEMENTS ENTRE EUX OU
+    USE EN % UNIQUEMENT THANKS FLEX 
+    */
 }
 
 .navbar-wrapper-link>li::before {
     content: "";
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 50%;
+    height: 50%;
     background: #3D3D3D;
     opacity: 0.3;
-    top: 25px;
-    left: 25px;
+    top: 25%;
+    left: 25%;
     border-radius: 50%;
     z-index: 1;
 }
@@ -57,30 +64,24 @@
 
 .navbar-wrapper-link>li>i {
     position: absolute;
+    width: 30%;
     color: var(--main-color-icon);
-    top: 35%;
-    left: 37px;
+    top: calc(50% - 1.5rem);
+    left: calc(50% - 1.5rem);
+    /* je fais un calcul car 50% devrait centré mais il faut déduire de la moitié du font size */
     font-size: 3rem;
     z-index: 1;
 }
 
 
-.navbar-wrapper-link>li:nth-child(1)>i {
-    left: 35px;
-}
-
-.navbar-wrapper-link>li:nth-child(2) i {
-    left: 39px;
-}
-
 .navbar-wrapper-link>li::after {
     content: "";
     position: absolute;
-    width: 90px;
-    height: 90px;
+    width: 90%;
+    height: 90%;
     background: #747474;
-    top: 5px;
-    left: 5px;
+    top: 5%;
+    left: 5%;
     border-radius: 50%;
     opacity: 0;
 }
@@ -96,7 +97,7 @@
     position: relative;
     /*obliger de le mettre en relative pour que le link soit au dessus des speudo elements pour clické */
     width: 100%;
-    height: 125%;
+    height: 100%;
     z-index: 2;
 }
 
@@ -104,36 +105,9 @@
     border-bottom: 2px solid white;
     margin-top: 10px;
     width: 70px;
-    position: absolute;
     left: 2rem;
 }
 
-.navbar-wrapper-li {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.navbar-wrapper-li>li {
-    display: block;
-    width: 25%;
-    color: white;
-    font-size: 2rem;
-    text-align: center;
-}
-
-.navbar-wrapper-li>li:nth-child(1) {
-    padding-left: 34.5rem;
-}
-
-.navbar-wrapper-li>li:nth-child(2) {
-    padding-left: 12rem;
-}
-
-.navbar-wrapper-li>li:nth-child(3) {
-    padding-right: 10rem;
-}
-
-.navbar-wrapper-li>li:nth-last-child(1) {
-    padding-right: 33rem;
+.navbar-wrapper-link>li>h3 {
+    color: #fff;
 }

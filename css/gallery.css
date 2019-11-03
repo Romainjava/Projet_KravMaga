@@ -88,11 +88,6 @@
 }
 
 
-/* trie par année */
-.is-none {
-    display: none;
-}
-
 @keyframes transition-is-none {
     0% {
         opacity: 0.5;

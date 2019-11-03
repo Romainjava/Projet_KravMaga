@@ -20,9 +20,9 @@
                 <div class="topbar-wrapper-logo-title">
                     <div class="topbar-block-logo"><img class="topbar-logo" src="" alt=""></div>
                     <div class="topbar-has-title">
-                        <span>Ecole de krav maga occitanie</span>
-                        <span>Haim Zut</span>
-                        <span>Le self défense accessible à tous</span>
+                        <h2>Ecole de krav maga occitanie</h2>
+                        <h1>Haim Zut</h1>
+                        <h2>Le self défense accessible à tous</h2>
                     </div>
                 </div>
 
@@ -46,22 +46,24 @@
     <nav class="navbar">
         <div class="navbar-global-wrapper-ul">
             <ul class="navbar-wrapper-link">
-                <li><a href="#"></a><i class="fas fa-camera-retro"></i></li>
-                <li><a href="#"></a><i class="fas fa-fire"></i></li>
-                <li><a href="#"></a><i class="fas fa-user-tie"></i></li>
-                <li><a href="#"></a><i class="fas fa-address-book"></i></li>
-            </ul>
-            <ul class="navbar-wrapper-li">
-                <li>Gallery</li>
-                <li>Evenement</li>
-                <li>Instructeurs</li>
-                <li>Historique</li>
+                <li><a href="#" data-target="gallery"></a><i class="fas fa-camera-retro"></i>
+                <h3>Gallery</h3>
+                </li>
+                <li><a href="#" data-target="evenement"></a><i class="fas fa-fire"></i>
+                <h3>Evenement</h3>
+                </li>
+                <li><a href="#" data-target="instructeur"></a><i class="fas fa-user-tie"></i>
+                <h3>Instructeurs</h3>
+                </li>
+                <li><a href="#" data-target="historique"></a><i class="fas fa-address-book"></i>
+                <h3>Historique</h3>
+                </li>
             </ul>
         </div>
     </nav>
     <main class="main">
         <section class="main-section-wrapper">
-            <div class="main-gallery-bloc-wrapper">
+            <div class="main-gallery-bloc-wrapper main-bloc" id="gallery">
 
                 <div class="main-menu-collapse-wrapper">
                     <ul class="gallery-item" id="saison">
@@ -70,13 +72,13 @@
                             <i class="fas fa-caret-right"></i>
                         </a>
                         <div class="gallery-collapsed-menu ">
-                        <li data-target="saison-2020"> Saison 2019->2020</li>
-                        <li data-target="saison-2019"> Saison 2018->2019</li>
-                    </div>
+                            <li data-target="saison-2020"> Saison 2019->2020</li>
+                            <li data-target="saison-2019"> Saison 2018->2019</li>
+                        </div>
                     </ul>
                 </div>
 
-                <section class="gallery-grid-wrapper" id="saison-2020">
+                <section class="gallery-grid-wrapper " id="saison-2020">
                     <article>
                         <img src="https://picsum.photos/id/237/400/300" alt="">
                         <h3>John Doe</h3>
@@ -112,44 +114,83 @@
                 </section>
 
                 <section class="gallery-grid-wrapper is-none" id="saison-2019">
-                        <article>
-                            <img src="https://picsum.photos/id/120/400/300" alt="">
-                            <h3>John Doe</h3>
-                        </article>
-                        <article>
-                            <img src="https://picsum.photos/id/121/400/300" alt="">
-                            <h3>Richard feedman</h3>
-                        </article>
-                        <article>
-                            <img src="https://picsum.photos/id/111/400/300" alt="">
-                            <h3>Tristan bouheure</h3>
-                        </article>
-                        <article>
-                            <img src="https://picsum.photos/id/122/400/300" alt="">
-                            <h3>Romain Van-Damme</h3>
-                        </article>
-                        <article>
-                            <img src="https://picsum.photos/id/123/400/300" alt="">
-                            <h3>Kévain devinw</h3>
-                        </article>
-                        <article>
-                            <img src="https://picsum.photos/id/124/400/300" alt="">
-                            <h3>Jean-mich mich</h3>
-                        </article>
-                        <article>
-                            <img src="https://picsum.photos/id/125/400/300" alt="">
-                            <h3>Jean-mich michdcd</h3>
-                        </article>
-                        <article>
-                            <img src="https://picsum.photos/id/126/400/300" alt="">
-                            <h3>Jean-mich michdcd</h3>
-                        </article>
-                    </section>
+                    <article>
+                        <img src="https://picsum.photos/id/120/400/300" alt="">
+                        <h3>John Doe</h3>
+                    </article>
+                    <article>
+                        <img src="https://picsum.photos/id/121/400/300" alt="">
+                        <h3>Richard feedman</h3>
+                    </article>
+                    <article>
+                        <img src="https://picsum.photos/id/111/400/300" alt="">
+                        <h3>Tristan bouheure</h3>
+                    </article>
+                    <article>
+                        <img src="https://picsum.photos/id/122/400/300" alt="">
+                        <h3>Romain Van-Damme</h3>
+                    </article>
+                    <article>
+                        <img src="https://picsum.photos/id/123/400/300" alt="">
+                        <h3>Kévain devinw</h3>
+                    </article>
+                    <article>
+                        <img src="https://picsum.photos/id/124/400/300" alt="">
+                        <h3>Jean-mich mich</h3>
+                    </article>
+                    <article>
+                        <img src="https://picsum.photos/id/125/400/300" alt="">
+                        <h3>Jean-mich michdcd</h3>
+                    </article>
+                    <article>
+                        <img src="https://picsum.photos/id/126/400/300" alt="">
+                        <h3>Jean-mich michdcd</h3>
+                    </article>
+                </section>
 
             </div>
 
+            <div class="main-evenement-bloc-wrapper main-bloc is-none" id="evenement">
 
+                <section class="evenement-wrapper">
+                    <article class="box">
+                        <div class="content">
+                            <h2>01</h2>
+                            <h3>Service 1</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id qua</p>
+                            <a href="#">Plus d'information</a>
+                        </div>
+                    </article>
+                    <article class="box">
+                        <div class="content">
+                            <h2>02</h2>
+                            <h3>Service 2</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id qua</p>
+                            <a href="#">Plus d'information</a>
+                        </div>
+                    </article>
+                    <article class="box">
+                        <div class="content">
+                            <h2>03</h2>
+                            <h3>Service 3</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id qua</p>
+                            <a href="#">Plus d'information</a>
+                        </div>
+                    </article>
+                    <article class="box">
+                        <div class="content">
+                            <h2>04</h2>
+                            <h3>Service 4</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id qua</p>
+                            <a href="#">Plus d'information</a>
+                        </div>
+                    </article>
+                </section>
+
+            </div>
         </section>
+
+
 
     </main>
 

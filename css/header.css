@@ -11,7 +11,7 @@ header {
 
 .topbar-wrapper-logo-title {
     display: flex;
-    margin-left: 20rem;
+    margin-left: 5%;
 }
 
 
@@ -27,26 +27,27 @@ header {
     display: flex;
     flex-direction: column;
     place-content: center;
+    width: max-content;
+    
     /* à cause du column */
     padding: 1rem 0 1rem 2rem;
     color: white;
+    
 }
 
-.topbar-has-title span:nth-child(1) {
+.topbar-has-title h2:nth-child(1) {
     text-transform: uppercase;
-    font-size: 2rem;
+    
 }
 
-.topbar-has-title span:nth-child(2) {
+.topbar-has-title h1:nth-child(2) {
     color: red;
     text-align: center;
-    text-transform: uppercase;
-    font-size: 2rem;
+    text-transform: uppercase;  
     padding: 5px 0;
 }
 
-.topbar-has-title span:nth-child(3) {
-    font-size: 20px;
+.topbar-has-title h2:nth-child(3) {
     text-align: end;
 }
 
