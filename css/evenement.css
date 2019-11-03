@@ -3,7 +3,9 @@
     justify-content: center;
     align-items: center;
     background: #060c21;
-    height: 100vh;
+    /* height: 100vh; */
+    /* Jamais de taille sur un parent padding ftw */
+    padding: 15rem 0;
     position: relative;
     z-index: 1;
 }
