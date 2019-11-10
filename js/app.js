@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     //Charge seulement quand le DOM est entiérement chargé
 
-    //manipule collapse menu de la page Gallery
+    // ============ Element HTML ============ 
     let saison = document.querySelector('#saison>a');
     let is_collapsed = document.querySelector('.gallery-collapsed-menu');
     let icon_fleche = document.querySelector('#saison > a > i');
@@ -10,7 +10,14 @@ document.addEventListener('DOMContentLoaded', function () {
     //gestion des link navbar
     let navbar_link = document.querySelectorAll('.navbar-wrapper-link>li>a');
     let div_link = document.querySelectorAll('.main-bloc');
+    //gestion du carroussel
+    let carroussel_items = document.querySelectorAll('.carroussel-items');
+    let sections_evennement = document.querySelectorAll('.evenement-wrapper');
+    let link_evennement = document.querySelectorAll('.evenement-wrapper > .box > .content > a');
 
+
+
+    // ============ Gere l'affichage de la gallery selon les saisons ============ 
     saison.addEventListener('click', function (event) {
         is_collapsed.classList.toggle('is-active');
         icon_fleche.classList.toggle('fa-caret-right');
@@ -34,11 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }) //fin li_collapsed for each
 
+    // ============ Redirige sur chaque section selon le link de la navbar ============ 
     navbar_link.forEach(link => {
         link.addEventListener('click', function (event) {
             let target = this.getAttribute('data-target');
-            console.log(target);
-            
             div_link.forEach(element => {
                 if (element.id == target) {
                     element.classList.remove('is-none');
@@ -55,6 +61,53 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     }); //fin navbar_link for each
+
+    // ============ Gere les boutons actifs du carroussel et ainsi que l'affichage de la bonne section ============ 
+    carroussel_items.forEach(div => {
+        div.addEventListener('click', function (event) {
+            let carroussel_isactive = document.querySelector('.carroussel-items--isactive');
+            //attrape  la class isactive presente
+            let target = this.getAttribute('data-target');
+
+            carroussel_isactive.classList.remove('carroussel-items--isactive');
+            this.classList.add('carroussel-items--isactive');
+
+            //désactive ou active une des trois sections en fonction du target
+            sections_evennement.forEach(element => {
+                if (element.id == target) {
+                    element.classList.remove('is-none');
+                } else {
+                    element.classList.add('is-none');
+                }
+            }); //fin for each section_evennement
+
+
+
+            event.preventDefault();
+        })
+    }); //fin for each carroussel_items
+
+    link_evennement.forEach(link => {
+        link.addEventListener('click', function (event) {
+            let target = this.getAttribute('data-target');
+            let active = document.querySelector('.evenement-wrapper:not(is-none)')
+            active.classList.add('goesLeft');
+            active.addEventListener('animationend', function () {
+                this.classList.add('is-none');
+                let modal = document.querySelector('#' + target);
+                modal.classList.add('fromRight');
+                modal.classList.remove('is-none');
+            });
+
+
+
+            event.preventDefault();
+        })
+    });
+
+
+
+
 
 
 }); // fin document ready

@@ -20,6 +20,7 @@
 
 }
 
+
 .evenement-wrapper .box {
     position: relative;
     height: 400px;
@@ -116,4 +117,68 @@
     color: white;
     background: rgb(143, 18, 18);
 
+}
+
+.main-evenement-bloc-wrapper::before {
+    content:"";
+    position: absolute;
+    background:rgba(170, 41, 41, 0.5);
+    width: 50%;
+    height: 5px;
+    top: 8%;
+}
+
+.main-evenement-bloc-wrapper::after {
+    content:"";
+    position: absolute;
+    background:rgba(170, 41, 41, 0.5);
+    width: 50%;
+    height: 5px;
+    top: 92%;
+}
+
+.carroussel {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    top: 95%;
+    width: calc(8% + 20px);
+}
+
+.carroussel-items {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+}
+
+.carroussel-items--isactive{
+    background: rgba(170, 41, 41, 0.5);
+}
+
+/* ======= animation ======== */
+
+.evenement-wrapper.goesLeft {
+    animation: goesLeft 2s forwards;  
+}
+
+.fromRight {
+    animation: fromRight 2s forwards;
+}
+
+
+@keyframes goesLeft {
+    from{
+        transform: translateX(0);
+    }to{
+        transform: translateX(-2000px);
+    }
+}
+
+@keyframes fromRight {
+    from {
+        transform: translateX(3000px);
+    }to{
+        transform: translateX(0);
+    }
 }

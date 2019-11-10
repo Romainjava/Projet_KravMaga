@@ -47,16 +47,16 @@
         <div class="navbar-global-wrapper-ul">
             <ul class="navbar-wrapper-link">
                 <li><a href="#" data-target="gallery"></a><i class="fas fa-camera-retro"></i>
-                <h3>Gallery</h3>
+                    <h3>Gallery</h3>
                 </li>
                 <li><a href="#" data-target="evenement"></a><i class="fas fa-fire"></i>
-                <h3>Evenement</h3>
+                    <h3>Evenement</h3>
                 </li>
                 <li><a href="#" data-target="instructeur"></a><i class="fas fa-user-tie"></i>
-                <h3>Instructeurs</h3>
+                    <h3>Instructeurs</h3>
                 </li>
                 <li><a href="#" data-target="historique"></a><i class="fas fa-address-book"></i>
-                <h3>Historique</h3>
+                    <h3>Historique</h3>
                 </li>
             </ul>
         </div>
@@ -152,13 +152,13 @@
 
             <div class="main-evenement-bloc-wrapper main-bloc is-none" id="evenement">
 
-                <section class="evenement-wrapper">
+                <section class="evenement-wrapper" id="section__evenement--1">
                     <article class="box">
                         <div class="content">
                             <h2>01</h2>
                             <h3>Service 1</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id qua</p>
-                            <a href="#">Plus d'information</a>
+                            <a href="#" data-target="test_redirection">Plus d'information</a>
                         </div>
                     </article>
                     <article class="box">
@@ -186,7 +186,84 @@
                         </div>
                     </article>
                 </section>
+                <section class="evenement-wrapper is-none" id="section__evenement--2">
+                    <article class="box">
+                        <div class="content">
+                            <h2>05</h2>
+                            <h3>Service 5</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id qua</p>
+                            <a href="#">Plus d'information</a>
+                        </div>
+                    </article>
+                    <article class="box">
+                        <div class="content">
+                            <h2>06</h2>
+                            <h3>Service 6</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id qua</p>
+                            <a href="#">Plus d'information</a>
+                        </div>
+                    </article>
+                    <article class="box">
+                        <div class="content">
+                            <h2>07</h2>
+                            <h3>Service 7</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id qua</p>
+                            <a href="#">Plus d'information</a>
+                        </div>
+                    </article>
+                    <article class="box">
+                        <div class="content">
+                            <h2>08</h2>
+                            <h3>Service 8</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id qua</p>
+                            <a href="#">Plus d'information</a>
+                        </div>
+                    </article>
+                </section>
+                <section class="evenement-wrapper is-none" id="section__evenement--3">
+                    <article class="box">
+                        <div class="content">
+                            <h2>09</h2>
+                            <h3>Service 9</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id qua</p>
+                            <a href="#">Plus d'information</a>
+                        </div>
+                    </article>
+                    <article class="box">
+                        <div class="content">
+                            <h2>10</h2>
+                            <h3>Service 10</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id qua</p>
+                            <a href="#">Plus d'information</a>
+                        </div>
+                    </article>
+                    <article class="box">
+                        <div class="content">
+                            <h2>11</h2>
+                            <h3>Service 11</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id qua</p>
+                            <a href="#">Plus d'information</a>
+                        </div>
+                    </article>
+                    <article class="box">
+                        <div class="content">
+                            <h2>12</h2>
+                            <h3>Service 12</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id qua</p>
+                            <a href="#">Plus d'information</a>
+                        </div>
+                    </article>
+                </section>
 
+                <section id="test_redirection" class="is-none">
+                    <article style="width: 500px; height: 500px; background: red;"></article>
+                </section>
+
+                <div class="carroussel">
+                    <div class="carroussel-items carroussel-items--isactive" data-target="section__evenement--1"></div>
+                    <div class="carroussel-items" data-target="section__evenement--2"></div>
+                    <div class="carroussel-items" data-target="section__evenement--3"></div>
+                </div>
             </div>
         </section>
 
