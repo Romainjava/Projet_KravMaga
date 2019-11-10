@@ -2,6 +2,7 @@
 @import url(navbar.css);
 @import url(gallery.css);
 @import url(evenement.css);
+@import url(instructeur.css);
 
 * {
     margin: 0;

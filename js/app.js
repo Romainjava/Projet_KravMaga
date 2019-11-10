@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // ============ Redirige sur chaque section selon le link de la navbar ============ 
     navbar_link.forEach(link => {
         link.addEventListener('click', function (event) {
-            let target = this.getAttribute('data-target');
+            let target = this.getAttribute('data-target');       
             div_link.forEach(element => {
                 if (element.id == target) {
                     element.classList.remove('is-none');
@@ -55,11 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     event.preventDefault();
                 }
             });
-
-
         })
-
-
 
     }); //fin navbar_link for each
 
@@ -71,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let target = this.getAttribute('data-target');
 
             carroussel_isactive.classList.remove('carroussel-items--isactive');
-            
+
             this.classList.add('carroussel-items--isactive');
             //désactive ou active une des trois sections en fonction du target
             sections_evennement.forEach(element => {
@@ -108,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }); //fin for each link_evennement
 
-
+    // ============ Gere le retour de la section redirection__evennement ============ 
     revenir__link.forEach(link => {
         link.addEventListener('click', function (event) {
             let target = this.getAttribute('data-target');
@@ -127,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             event.preventDefault();
         })
-
 
     }); //fin for each revenir_link
 
