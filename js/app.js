@@ -11,10 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
     let navbar_link = document.querySelectorAll('.navbar-wrapper-link>li>a');
     let div_link = document.querySelectorAll('.main-bloc');
     //gestion du carroussel
+    let carroussel = document.querySelector('.carroussel');
     let carroussel_items = document.querySelectorAll('.carroussel-items');
     let sections_evennement = document.querySelectorAll('.evenement-wrapper');
     let link_evennement = document.querySelectorAll('.evenement-wrapper > .box > .content > a');
-
+    let revenir__link = document.querySelectorAll('.redirection__evenement>.redirection__link');
 
 
     // ============ Gere l'affichage de la gallery selon les saisons ============ 
@@ -70,11 +71,12 @@ document.addEventListener('DOMContentLoaded', function () {
             let target = this.getAttribute('data-target');
 
             carroussel_isactive.classList.remove('carroussel-items--isactive');
+            
             this.classList.add('carroussel-items--isactive');
-
             //désactive ou active une des trois sections en fonction du target
             sections_evennement.forEach(element => {
                 if (element.id == target) {
+                    element.classList.remove('fromLeft');
                     element.classList.remove('is-none');
                 } else {
                     element.classList.add('is-none');
@@ -86,25 +88,48 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
         })
     }); //fin for each carroussel_items
-
+    // ============ Gere le link "en savoir plus" de la page evennement et son animation ============
     link_evennement.forEach(link => {
         link.addEventListener('click', function (event) {
             let target = this.getAttribute('data-target');
             let active = document.querySelector('.evenement-wrapper:not(is-none)')
+            let modal = document.querySelector('#' + target);
+            carroussel.classList.add('is-none');
             active.classList.add('goesLeft');
-            active.addEventListener('animationend', function () {
-                this.classList.add('is-none');
-                let modal = document.querySelector('#' + target);
-                modal.classList.add('fromRight');
+            setTimeout(function () {
                 modal.classList.remove('is-none');
-            });
+                modal.classList.add('fromRight');
+                active.classList.remove('goesLeft');
+                active.classList.add('is-none');
+                
+                
+            }, 1000);
+            event.preventDefault();
+        })
+    }); //fin for each link_evennement
 
+
+    revenir__link.forEach(link => {
+        link.addEventListener('click', function (event) {
+            let target = this.getAttribute('data-target');
+            let active = document.querySelector('#redirection__evenement--' + target);
+            active.classList.remove('fromRight')
+            active.classList.add('goesRight');
+            setTimeout(function () {
+                carroussel.classList.remove('is-none');
+                active.classList.add('is-none');
+                active.classList.remove('goesRight');
+                let modal = document.querySelector('#section__evenement--' + target);
+                modal.classList.add('fromLeft');
+                modal.classList.remove('is-none');
+            }, 1000);
 
 
             event.preventDefault();
         })
-    });
 
+
+    }); //fin for each revenir_link
 
 
 
