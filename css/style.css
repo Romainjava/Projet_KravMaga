@@ -4,6 +4,7 @@
 @import url(evenement.css);
 @import url(instructeur.css);
 @import url(historique.css);
+@import url(tarifs.css);
 
 * {
     margin: 0;
@@ -28,9 +29,6 @@ p {
 .is-none {
     display: none;
 }
-/*======== import header ======== */
-
-
 
 a {
     color: white;

@@ -1,0 +1,99 @@
+.tarifs__section {
+    display: flex;
+}
+
+#map {
+    width: 50%;
+    height: 80vh;
+}
+.leaflet-popup-content{
+    width: 100% !important;
+    height: auto;
+}
+.tarifs__blocTarifs--right {
+    width: 50%;
+}
+
+.tarifs__BlocDescription {
+    display: flex;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.tarifs__tarif--left {
+    width: 50%;
+    height: auto;
+    font-size: calc(0.5vw + 0.8em);
+    line-height: 1.8;
+    background: #6D6C6C;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+.tarifs__tarif--left>.tarifs__title {
+    font-size: calc(0.8vw + 1em);
+    color: #000;
+}
+
+.tarifs__heures--right {
+    position: relative;
+    width: 50%;
+    height: auto;
+    font-size: calc(0.5vw + 0.8em);
+    line-height: 1.8;
+    background: whitesmoke;
+    padding: 1rem 2rem;
+}
+
+.tarifs__heures--right>.tarifs__title {
+    font-size: calc(0.8vw + 1em);
+    color: rgb(143, 18, 18);
+}
+
+.tarifs__heures--right>p:last-child>span {
+    display: inline-block;
+    position: relative;
+    bottom: 0%;
+    left: calc(17% + 0.1vw)
+    
+}
+
+.tarifs__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.tarifs__contact>.tarifs__title {
+    position: relative;
+    font-size: calc(0.5vw + 1em);
+    color: rgb(143, 18, 18);
+    transform: translateX(-18vw);
+    margin: 1rem 0;
+}
+
+.tarifs__contact>form {
+    display: flex;
+    flex-direction: column;
+}
+
+.tarifs__contact>form>textarea {
+    width: 40vw;
+    height: 30vh;
+}
+
+.tarifs__contact>form>button {
+    width: 30%;
+    padding: calc(0.5em + 0.5em) calc(1vw + 0.5em);
+    margin: 1rem 0;
+    font-size: calc(0.5vw + 0.5em);
+    background: grey;
+    border: 1px solid #fff;
+}
+
+.tarifs__contact>form>button:hover {
+    background: rgb(143, 18, 18);
+    color: white;
+}

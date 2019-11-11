@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
-    <title>Krav Maga Occitanie</title>
+    <link rel="stylesheet" href="leatflet/leaflet.css" />
+    <title>Krav Maga Haim Zut Occitanie à Mèze</title>
 </head>
 
 <body>
@@ -28,11 +29,13 @@
 
                 <div class="top-wrapper-link-media">
                     <div class="topbar-wrapper-link-right">
-                        <a class="topbar-link-right is-hover" href="#">Tarifs</a>
+                        <a class="topbar-link-right is-hover" data-target="tarifs" href="#">Tarifs</a>
                     </div>
                     <div class="topbar-has-media-right">
-                        <span><i class="fab fa-facebook is-hover"></i></span>
-                        <span><i class="fab fa-instagram is-hover"></i></span>
+                        <a href="https://www.facebook.com/pg/kravmagameze/photos/?ref=page_internal&mt_nav=0"
+                            target="__blank" alt="redirection facebook"><i class="fab fa-facebook is-hover"></i></a>
+                        <a href="#" target="__blank" alt="redirection instagram"><i
+                                class="fab fa-instagram is-hover"></i></a>
                     </div>
                 </div>
 
@@ -345,7 +348,7 @@
                             <h3>Vincent</h3>
                             <ul>
                                 <li>Enseignant cours Enfant</li>
-                                <li>Enseignant Marron</li>
+                                <li>Ceinture Marron</li>
                             </ul>
                         </div>
                     </article>
@@ -388,6 +391,35 @@
                 </div>
 
             </section>
+
+            <section id="tarifs" class="tarifs__section main-bloc is-none">
+                <div class="tarifs__blocMaps--left" id="map">
+                </div>
+                <article class="tarifs__blocTarifs--right">
+                    <div class="tarifs__BlocDescription">
+                        <div class="tarifs__tarif--left">
+                            <h3 class="tarifs__title">Tarifs :</h3>
+                            <p>Licence Adulte : 280€</p>
+                            <p>Licence Enfant(8 à 14ans) : 150€</p>
+                        </div>
+                        <div class="tarifs__heures--right">
+                            <h3 class="tarifs__title">Heures d'ouverture :</h3>
+                            <p>Lundi : Krav adulte 20h15 - 21h45</p>
+                            <p> Mardi : PPG 20h15 - 21h00</p>
+                            <p>Jeudi : Krav enfant 19h00 - 19h45 <span>Krav adulte 20h15 - 21h45</span></p>
+
+                        </div>
+                    </div>
+                    <div class="tarifs__contact">
+                        <h3 class="tarifs__title">Contact :</h3>
+                        <form action="mailto:ceciestunexempledemail@gmail.com" method="GET">
+                            <textarea type="" id="fmessage" name="body" placeholder="Votre Message..."
+                                required></textarea>
+                            <button type="submit">Envoyer</button>
+                        </form>
+                    </div>
+                </article>
+            </section>
         </section>
 
 
@@ -407,5 +439,6 @@
 
 </body>
 <script src="js/app.js"></script>
+<script src="leatflet/leaflet.js"></script>
 
 </html>

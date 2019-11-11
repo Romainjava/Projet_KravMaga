@@ -83,11 +83,11 @@ header {
     margin-left: 10px;
 }
 
-.topbar-has-media-right span:nth-child(1) {
+.topbar-has-media-right a:nth-child(1) {
     padding: 0 1rem;
 }
 
-.topbar-has-media-right span>* {
+.topbar-has-media-right a>* {
     font-size: 40px;
 }
 
