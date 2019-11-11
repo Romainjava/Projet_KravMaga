@@ -3,6 +3,7 @@
 @import url(gallery.css);
 @import url(evenement.css);
 @import url(instructeur.css);
+@import url(historique.css);
 
 * {
     margin: 0;

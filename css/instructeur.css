@@ -81,22 +81,28 @@
     font-size: calc(0.8vw + 0.8em);
 }
 
-.instructeur__blocText > h3 {
+.instructeur__blocText>h3 {
     font-size: calc(0.8vw + 0.8em);
     color: rgb(143, 18, 18);
 }
 
-.instructeur__blocText > ul li {
+.instructeur__blocText>ul li {
     font-size: calc(0.5vw + 0.5em);
 }
 
 
 @keyframes rotate {
-    0%{
+    0% {
         transform: rotate(0);
-    }50% {
+    }
+
+    50% {
         transform: rotate(180deg);
-    }100%{
+    }
+
+    100% {
         transform: rotate(360deg);
     }
 }
+
+/* ========= source de l'inspiration de l'animation et des images http://www.justine-mazure.fr/ ========== */
