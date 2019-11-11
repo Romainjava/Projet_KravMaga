@@ -62,7 +62,7 @@
     width: 85%;
     height: 85%;
     object-fit: cover;
-    object-position: 0 -8rem;
+    /* object-position: 0 -8rem; */
 }
 
 /* reset proprio troisieme photo */
@@ -104,5 +104,42 @@
         transform: rotate(360deg);
     }
 }
+
+
+
+
+/* ======== Media query ======= */
+@media (max-width: 640px) {
+
+    /* CSS mobile ici */
+    .instructeur__wrapper--center {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instructeur__wrapper {
+        padding: 10rem 0;
+    }
+
+
+    .instructeur__article:nth-child(2) {
+        transform: translateY(0rem);
+    }
+
+    .instructeur__article {
+        margin-bottom: 100px;
+    }
+
+    .instructeur__blocText > ul li {
+
+        font-size: calc(1vw + 1em);
+    
+    }
+
+    .instructeur__blocText > h3 {
+
+        font-size: calc(1vw + 1.2em);
+}
+
 
 /* ========= source de l'inspiration de l'animation et des images http://www.justine-mazure.fr/ ========== */

@@ -5,7 +5,7 @@
     grid-template-columns: repeat(auto-fit, minmax(24vmax, 42vmin));
     justify-content: center;
     animation: transition-is-none .8s ease-out;
-    
+
 
 }
 
@@ -13,7 +13,7 @@
     /* place-self: center; */
     /* Permet de pas stretch l'image et lui donner de taille */
     text-align: center;
-    
+
 }
 
 
@@ -79,8 +79,9 @@
 
 .gallery-collapsed-menu li:hover:before {
     opacity: 1;
-    
+
 }
+
 /* permet d'activé la propriété que quand les deux valeurs sont active */
 .gallery-collapsed-menu.is-active {
     max-height: 10em;
@@ -91,7 +92,43 @@
 @keyframes transition-is-none {
     0% {
         opacity: 0.5;
-    }100% {
+    }
+
+    100% {
         opacity: 1;
+    }
+}
+
+
+/* ======== Media query ======= */
+@media (max-width: 640px) {
+
+    /* CSS mobile ici */
+    .gallery-grid-wrapper article img {
+        width: 100%;
+    }
+
+    .gallery-grid-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery-collapsed-menu li {
+        padding: 13px 15px;
+    }
+
+    .navbar-wrapper-link>li a:hover {
+        left: 0;
+    }
+
+    .gallery-grid-wrapper>article>h3 {
+        font-size: calc(0.8vw + 1em);
+        padding: 1rem 0;
+    }
+
+    .gallery-item {
+        width: 50%;
+        text-align: center;
+        font-size: calc(1.8vw + 0.5em);
     }
 }

@@ -8,7 +8,8 @@
     padding: 20rem 0;
     position: relative;
     z-index: 1;
-    overflow: hidden; /* par rapport à l'animation du sliders */
+    overflow: hidden;
+    /* par rapport à l'animation du sliders */
 }
 
 .evenement-wrapper {
@@ -156,14 +157,16 @@
 .carroussel-items--isactive {
     background: rgba(170, 41, 41, 0.5);
 }
-.redirection__evenement{
+
+.redirection__evenement {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 400px;/* pour fixé une taille par rapport à l'animation */
+    height: 400px;
+    /* pour fixé une taille par rapport à l'animation */
 }
 
-.redirection__article{
+.redirection__article {
     display: flex;
     justify-content: center;
 }
@@ -181,11 +184,13 @@
     width: 100%;
     height: 100%;
 }
-.redirection__bloc-img{
+
+.redirection__bloc-img {
     position: relative;
     width: 300px;
     height: 354px;
 }
+
 .redirection__bloc-img::after {
     content: "";
     top: -5%;
@@ -228,7 +233,7 @@
     display: inline-block;
     color: #fff;
     transition: 0.5s;
-    transform: translateY(43rem);
+    transform: translateY(47rem);
 }
 
 .redirection__link:hover {
@@ -248,12 +253,12 @@
 
 .fromLeft {
     animation: fromLeft 2s forwards;
-    
+
 }
 
-.goesRight{
+.goesRight {
     animation: goesRight 2s forwards;
-    
+
 }
 
 @keyframes goesLeft {
@@ -279,7 +284,9 @@
 @keyframes goesRight {
     from {
         transform: translateX(0);
-    }to{
+    }
+
+    to {
         transform: translateX(3000px);
     }
 }
@@ -287,7 +294,70 @@
 @keyframes fromLeft {
     from {
         transform: translateX(-2000px);
-    }to{
+    }
+
+    to {
         transform: translateX(0);
     }
+}
+
+
+
+/* ======== Media query ======= */
+@media (max-width: 640px) {
+
+    /* CSS mobile ici */
+    .evenement-wrapper {
+        position: relative;
+        width: 75%;
+        gap: 40px;
+    }
+
+    .box .content h3 {
+        font-size: 20px;
+    }
+
+    .box .content p {
+        font-size: 15px;
+    }
+
+    .main-evenement-bloc-wrapper {
+        padding: 10rem 0;
+    }
+
+    .main-evenement-bloc-wrapper::before {
+        display: none;
+    }
+    .redirection__evenement {
+        height: auto;
+        min-height: 800px;
+    }
+
+
+    .redirection__article {
+        flex-direction: column;
+        align-items: center;    
+    }
+
+    .redirection__blocText {
+        max-width: 80%;
+    }
+
+    .redirection__link {
+        transform: translateY(0rem);
+        position: relative;
+        }
+
+        .redirection__liste li {
+
+            font-size: calc(1vw + 1em);
+        }
+
+        .main-evenement-bloc-wrapper::after {
+            display: none;
+        }
+
+        .carroussel {
+        margin:10px;
+        }
 }

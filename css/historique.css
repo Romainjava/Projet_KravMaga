@@ -12,7 +12,8 @@
 .historique__img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* permet une bonne redimension */
+    object-fit: cover;
+    /* permet une bonne redimension */
 }
 
 .historique__blocText--right {
@@ -22,7 +23,7 @@
     height: 100%;
     position: relative;
     background: whitesmoke;
-    
+
 }
 
 .historique__blocText {
@@ -35,7 +36,7 @@
     width: 70vw;
     height: auto;
     background: white;
-    box-shadow: 0px 0px 50px #DDDDDD;  
+    box-shadow: 0px 0px 50px #DDDDDD;
 }
 
 .historique__title {
@@ -49,4 +50,31 @@
     font-size: calc(0.5vw + 0.8em);
     margin-bottom: 1rem;
     line-height: 1.6;
+}
+
+/* ======== Media query ======= */
+@media (max-width: 640px) {
+
+    .historique__wrapper {
+        flex-direction: column;
+    }
+
+    .historique__blocImg--left {
+        /* width: 50%; */
+        width: 100%;
+    }
+
+    .historique__blocText--right {
+        /* width: 50%; */
+        width: 100%;
+    }
+
+    .historique__blocText {
+        /* position: absolute; */
+        /* left: -50%; */
+        /* width: 70vw; */
+        position: relative;
+        left:0;
+        width:100%;
+    }
 }

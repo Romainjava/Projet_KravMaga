@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
     link_evennement.forEach(link => {
         link.addEventListener('click', function (event) {
             let target = this.getAttribute('data-target');
-            let active = document.querySelector('.evenement-wrapper:not(is-none)')
+            let active = document.querySelector('.evenement-wrapper:not(.is-none)')
             let modal = document.querySelector('#' + target);
             carroussel.classList.add('is-none');
             active.classList.add('goesLeft');
@@ -125,7 +125,8 @@ document.addEventListener('DOMContentLoaded', function () {
     revenir__link.forEach(link => {
         link.addEventListener('click', function (event) {
             let target = this.getAttribute('data-target');
-            let active = document.querySelector('#redirection__evenement--' + target);
+            let active = document.querySelector('.redirection__evenement:not(.is-none)');//#redirection__evenement--' + target);
+            console.log(active);
             active.classList.remove('fromRight')
             active.classList.add('goesRight');
             setTimeout(function () {

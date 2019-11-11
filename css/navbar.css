@@ -111,3 +111,28 @@
 .navbar-wrapper-link>li>h3 {
     color: #fff;
 }
+
+/* ======== Media query ======= */
+@media (max-width: 640px) {
+
+    /* CSS mobile ici */
+    .navbar-wrapper-link>* {
+        width: 70px;
+        height: 70px;
+    }
+
+    .navbar-wrapper-link>li::before {
+        width: 70%;
+        height: 70%;
+        top: 15%;
+        left: 15%;
+    }
+
+    .navbar-global-wrapper-ul {
+        padding: 2rem 0 4rem 0;
+    }
+
+    .navbar-wrapper-link>li>h3 {
+        font-size: calc(0.8vw + 0.8em);
+    }
+}

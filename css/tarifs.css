@@ -6,10 +6,12 @@
     width: 50%;
     height: 80vh;
 }
-.leaflet-popup-content{
+
+.leaflet-popup-content {
     width: 100% !important;
     height: auto;
 }
+
 .tarifs__blocTarifs--right {
     width: 50%;
 }
@@ -55,7 +57,6 @@
     position: relative;
     bottom: 0%;
     left: calc(17% + 0.1vw)
-    
 }
 
 .tarifs__contact {
@@ -96,4 +97,52 @@
 .tarifs__contact>form>button:hover {
     background: rgb(143, 18, 18);
     color: white;
+}
+
+
+/* ======== Media query ======= */
+@media (max-width: 640px) {
+    #map {
+        display: none;
+    }
+
+    .tarifs__section {
+        flex-direction: column;
+    }
+
+    .tarifs__blocTarifs--right {
+        width: 100%;
+    }
+
+    .tarifs__BlocDescription {
+        flex-direction: column;
+    }
+
+    .tarifs__tarif--left {
+        width: 100%;
+    }
+
+    .tarifs__heures--right {
+        width: 100%;
+    }
+
+    .tarifs__contact>form>textarea {
+        width: 80vw;
+    }
+
+    .tarifs__contact>form>button {
+        font-size: calc(1.5vw + 0.5em);
+    }
+
+    .tarifs__contact>.tarifs__title {
+        transform: translateX(0vw);
+        text-align: center;
+    }
+
+    .tarifs__heures--right>p:last-child>span {
+        display: block;
+        width: 300px;
+        left: calc(10.5% + 0.1vw); 
+    }
+
 }
