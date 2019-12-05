@@ -113,7 +113,7 @@
 
     /* CSS mobile ici */
     .instructeur__wrapper--center {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
 
@@ -123,7 +123,11 @@
 
 
     .instructeur__article:nth-child(2) {
-        transform: translateY(0rem);
+        transform: translateY(-45rem);
+    }
+
+    .instructeur__article:nth-child(3) {
+        transform: translateY(40rem);
     }
 
     .instructeur__article {

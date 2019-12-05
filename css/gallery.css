@@ -2,11 +2,10 @@
 
 .gallery-grid-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24vmax, 42vmin));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    gap: 1%;
     justify-content: center;
     animation: transition-is-none .8s ease-out;
-
-
 }
 
 .gallery-grid-wrapper>* {
@@ -14,6 +13,12 @@
     /* Permet de pas stretch l'image et lui donner de taille */
     text-align: center;
 
+}
+.gallery-grid-wrapper > article > img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 0 5px 3px black;
 }
 
 

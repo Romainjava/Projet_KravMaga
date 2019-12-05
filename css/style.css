@@ -5,6 +5,7 @@
 @import url(instructeur.css);
 @import url(historique.css);
 @import url(tarifs.css);
+@import url(footer.css);
 
 * {
     margin: 0;

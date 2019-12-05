@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var marker = L.marker([43.419749, 3.600515]).addTo(map);
     marker.bindPopup("<b>Dojo Taurus</b><br><span>9 Rue de la Méditerranée</span><br><span> 34140 Mèze.</span>").openPopup();
     //me permet de resize en dynamic à cause du display none par defaut
-    map.on('resize', function(){  
+    map.on('resize', function () {
         map.invalidateSize(true);
     })
 
@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let link_evennement = document.querySelectorAll('.evenement-wrapper > .box > .content > a');
     let revenir__link = document.querySelectorAll('.redirection__evenement>.redirection__link');
     let tarif__link = document.querySelector('.topbar-link-right');
+    const footer = document.querySelector('footer');
 
     // ============ Gere l'affichage de la gallery selon les saisons ============ 
     saison.addEventListener('click', function (event) {
@@ -64,6 +65,12 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('click', function (event) {
             let target = this.getAttribute('data-target');
             div_link.forEach(element => {
+                if (target != "gallery") {
+                    footer.classList.add('is-none');
+                } else {
+                    footer.classList.remove('is-none');
+                }
+
                 if (element.id == target) {
                     element.classList.remove('is-none');
                     event.preventDefault();
@@ -125,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
     revenir__link.forEach(link => {
         link.addEventListener('click', function (event) {
             let target = this.getAttribute('data-target');
-            let active = document.querySelector('.redirection__evenement:not(.is-none)');//#redirection__evenement--' + target);
+            let active = document.querySelector('.redirection__evenement:not(.is-none)'); //#redirection__evenement--' + target);
             console.log(active);
             active.classList.remove('fromRight')
             active.classList.add('goesRight');
@@ -161,6 +168,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }) //fin tarif__link
 
-    
+
 
 }); // fin document ready
