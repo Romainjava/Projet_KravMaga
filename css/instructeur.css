@@ -1,6 +1,7 @@
 .instructeur__wrapper {
     max-width: 100%;
-    padding: 25rem 0;
+    padding-top: 25rem;
+    padding-bottom: 35rem;
     background: black;
 }
 
@@ -75,10 +76,11 @@
 }
 
 .instructeur__blocText {
-    text-align: center;
+    width: 150%;
+    text-align: left;
     margin-top: 2rem;
     color: white;
-    font-size: calc(0.8vw + 0.8em);
+    font-size: calc(0.7vw + 0.7em);
 }
 
 .instructeur__blocText>h3 {
@@ -86,7 +88,16 @@
     color: rgb(143, 18, 18);
 }
 
+.instructeur__blocText>ul {
+    text-align: left;
+}
+
+.instructeur__blocText>ul a {
+    color: rebeccapurple;
+}
+
 .instructeur__blocText>ul li {
+    line-height: 2;
     font-size: calc(0.5vw + 0.5em);
 }
 
@@ -121,29 +132,46 @@
         padding: 10rem 0;
     }
 
+    .instructeur__article {
+        width: 250px;
+        height: 250px;
+    }
+
+    .instructeur__article:nth-child(1) {
+        transform: translateY(9rem);
+    }
 
     .instructeur__article:nth-child(2) {
-        transform: translateY(-45rem);
+        transform: translateY(-42rem);
     }
 
     .instructeur__article:nth-child(3) {
-        transform: translateY(40rem);
+        transform: translateY(45rem);
     }
 
     .instructeur__article {
         margin-bottom: 100px;
     }
 
-    .instructeur__blocText > ul li {
-
-        font-size: calc(1vw + 1em);
-    
+    .instructeur__blocText {
+        max-width: 100%;
+        text-align: left;
+        margin-top: 2rem;
+        color: white;
+        font-size: calc(0.7vw + 0.7em);
     }
 
-    .instructeur__blocText > h3 {
+    .instructeur__blocText>ul li {
+
+        font-size: calc(1vw + 1em);
+
+    }
+
+    .instructeur__blocText>h3 {
 
         font-size: calc(1vw + 1.2em);
-}
+    }
 
 
-/* ========= source de l'inspiration de l'animation et des images http://www.justine-mazure.fr/ ========== */
+
+    /* ========= source de l'inspiration de l'animation et des images http://www.justine-mazure.fr/ ========== */

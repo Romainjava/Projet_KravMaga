@@ -117,7 +117,7 @@ header {
     }
 
     .topbar-has-title {
-
+        padding: 0;
         font-size: calc(0.8vw + 0.5em);
 
     }
@@ -127,7 +127,7 @@ header {
     }
 
     .topbar-has-media-right a>* {
-        font-size: 22px;
+        font-size: 16px;
     }
 
     .topbar-has-media-right {
@@ -135,5 +135,8 @@ header {
     }
     .topbar-link-right::after {
         display: none;
+    }
+    .topbar-has-media-right a:nth-child(1) {
+        padding: 0;
     }
 }

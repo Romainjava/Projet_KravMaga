@@ -168,6 +168,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }) //fin tarif__link
 
-
+    // === MEDIA QUERIES POUR MOZILLA === //
+    const ua = navigator.userAgent;
+    if(ua.indexOf('Mozilla') >= 0){
+        if(window.matchMedia('(max-width: 640px)').matches){
+            section_grid[0].style.marginTop = '10rem';
+        }
+    }
 
 }); // fin document ready
