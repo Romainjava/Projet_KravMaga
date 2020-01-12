@@ -116,9 +116,20 @@
 @media (max-width: 640px) {
 
     /* CSS mobile ici */
+    .navbar-wrapper-link {
+        width: 100%;
+    }
+
     .navbar-wrapper-link>* {
         width: 70px;
         height: 70px;
+    }
+
+    .navbar-wrapper-link>li>i {
+        left: calc(48% - 1.2rem);
+    }
+    .navbar-wrapper-link>li>.fa-fire {
+        left: calc(51% - 1.2rem);
     }
 
     .navbar-wrapper-link>li::before {

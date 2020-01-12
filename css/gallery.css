@@ -6,6 +6,7 @@
     gap: 1%;
     justify-content: center;
     animation: transition-is-none .8s ease-out;
+
 }
 
 .gallery-grid-wrapper>* {
@@ -14,7 +15,8 @@
     text-align: center;
 
 }
-.gallery-grid-wrapper > article > img {
+
+.gallery-grid-wrapper>article>img {
     width: 400px;
     height: 300px;
     object-fit: cover;
@@ -111,11 +113,6 @@
     /* CSS mobile ici */
     .gallery-grid-wrapper article img {
         width: 100%;
-    }
-
-    .gallery-grid-wrapper {
-        display: flex;
-        flex-direction: column;
     }
 
     .gallery-collapsed-menu li {

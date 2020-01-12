@@ -1,0 +1,132 @@
+.ppg {
+    padding: 2rem 0;
+}
+
+.ppg__header {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 0 10%;
+    padding: 5rem 0;
+    color: rgba(0, 0, 0, .9);
+}
+
+.ppg__header--title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.ppg__header--title>h2 {
+    font-size: 10vmax;
+    color: rgb(143, 18, 18);
+}
+
+.ppg__header--title>h2::before {
+    content: "";
+    display: block;
+    width: 1em;
+    height: 3px;
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    background: rgb(143, 18, 18);
+}
+
+.ppg__header--title>p {
+    line-height: 1.8;
+    font-size: calc(1em + 0.8vw);
+}
+
+.ppg__header--cropped {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: flex-end;
+    background: url(../asset/Shape.png) center center / 100% 100%;
+}
+
+.ppg__header--left {
+    visibility: hidden;
+    opacity: 0;
+}
+.ppg__header--right {
+    color: white;
+    padding: 0 2em;
+}
+
+.ppg__header--list > li {
+    line-height: 1.8;
+    font-size: calc(0.6em + 0.6vw);
+}
+
+.ppg__header--souslist {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    line-height: 1.6;
+}
+
+.ppg__gallery {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 10%;
+}
+
+.ppg__gallery--img:nth-child(even) {
+    margin-left: auto;
+}
+
+.ppg__gallery--img {
+    width: 90rem;
+    height: 40rem;
+    object-fit: cover;
+    object-position: center 30%;
+    margin: 2% 0;
+    box-shadow: 6px 6px 16px rgba(0, 0, 0, .6),
+                -6px -6px 16px rgba(255, 255, 255, .6);
+                
+}
+
+@media (max-width: 800px){
+    .ppg__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .ppg__header--right {
+        margin-left: 10%;
+        margin-top: 3%;
+    }
+
+    .ppg__header--list > li {
+        line-height: 1.8;
+        font-size: 1.1em;
+    }
+
+    .ppg__gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        margin: 0;
+       
+    }
+
+    .ppg__gallery--img:nth-child(even) {
+       margin: 0;
+    }
+    
+    .ppg__gallery--img {
+        max-width: 100%;
+        width: 35rem;
+        height: 20rem;
+        object-fit: cover;
+        object-position: center 30%;
+        margin: 5% 0;
+        box-shadow: 6px 6px 16px rgba(0, 0, 0, .6),
+                    -6px -6px 16px rgba(255, 255, 255, .6);
+                    
+    }
+}

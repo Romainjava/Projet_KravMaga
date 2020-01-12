@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const ua = navigator.userAgent;
     if(ua.indexOf('Mozilla') >= 0){
         if(window.matchMedia('(max-width: 640px)').matches){
-            section_grid[0].style.marginTop = '10rem';
+            section_grid[0].style.marginTop = '5rem';
         }
     }
 

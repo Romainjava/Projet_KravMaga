@@ -1,6 +1,7 @@
 @import url(header.css);
 @import url(navbar.css);
 @import url(gallery.css);
+@import url(ppg.css);
 @import url(evenement.css);
 @import url(instructeur.css);
 @import url(historique.css);
@@ -40,6 +41,7 @@ a {
 .is-hover:hover {
     color: red;
 }
+
 
 /* ======== Media query ======= */
 @media (max-width: 640px) {

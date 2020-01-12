@@ -1,8 +1,8 @@
 footer {
-    position: relative;
+    position: fixed;
     width: 100%;
     background: #353535;
-    margin-top: 3rem;
+    bottom: 0;
 }
 
 .footer-section-wrapper {
@@ -49,7 +49,7 @@ footer {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
     .footer-section-wrapper {
         flex-direction: column;
     }
@@ -57,7 +57,8 @@ footer {
     .footer-section-wrapper>* {
         margin: 5px 0;
     }
-    .footer-section-wrapper>.svg{
+
+    .footer-section-wrapper>.svg {
         top: -10%;
         left: 70%;
     }

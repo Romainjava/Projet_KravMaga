@@ -1,8 +1,9 @@
 .instructeur__wrapper {
     max-width: 100%;
     padding-top: 25rem;
-    padding-bottom: 35rem;
+    padding-bottom: 25rem;
     background: black;
+    height: 80vh;
 }
 
 .instructeur__wrapper--center {
@@ -76,7 +77,18 @@
 }
 
 .instructeur__blocText {
+transform: translateX(50px);
+}
+
+.jb {
     width: 150%;
+    text-align: left;
+    margin-top: 2rem;
+    color: white;
+    font-size: calc(0.7vw + 0.7em);
+}
+.dams,.vincent {
+    width: 100%;
     text-align: left;
     margin-top: 2rem;
     color: white;
@@ -126,10 +138,12 @@
     .instructeur__wrapper--center {
         flex-direction: column-reverse;
         align-items: center;
+        
     }
 
     .instructeur__wrapper {
         padding: 10rem 0;
+        height: 200vh;
     }
 
     .instructeur__article {
@@ -138,7 +152,7 @@
     }
 
     .instructeur__article:nth-child(1) {
-        transform: translateY(9rem);
+        transform: translateY(14rem);
     }
 
     .instructeur__article:nth-child(2) {
@@ -146,7 +160,7 @@
     }
 
     .instructeur__article:nth-child(3) {
-        transform: translateY(45rem);
+        transform: translateY(47rem);
     }
 
     .instructeur__article {
