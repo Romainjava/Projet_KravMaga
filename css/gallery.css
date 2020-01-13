@@ -6,7 +6,7 @@
     gap: 1%;
     justify-content: center;
     animation: transition-is-none .8s ease-out;
-
+    padding-bottom: 20rem;
 }
 
 .gallery-grid-wrapper>* {
@@ -108,7 +108,11 @@
 
 
 /* ======== Media query ======= */
-@media (max-width: 640px) {
+@media (max-width: 800px) {
+
+    footer {
+        display: none;
+    }
 
     /* CSS mobile ici */
     .gallery-grid-wrapper article img {

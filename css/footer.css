@@ -3,6 +3,7 @@ footer {
     width: 100%;
     background: #353535;
     bottom: 0;
+    z-index: 2;
 }
 
 .footer-section-wrapper {
