@@ -3,10 +3,10 @@
 .gallery-grid-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
-    gap: 1%;
+    gap: 0 1%;
     justify-content: center;
     animation: transition-is-none .8s ease-out;
-    padding-bottom: 20rem;
+    padding-bottom: 5rem;
 }
 
 .gallery-grid-wrapper>* {
@@ -108,10 +108,10 @@
 
 
 /* ======== Media query ======= */
-@media (max-width: 800px) {
-
-    footer {
-        display: none;
+@media (max-width: 850px) {
+    .gallery-grid-wrapper {
+        display: block;
+        padding-bottom: 3rem;
     }
 
     /* CSS mobile ici */

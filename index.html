@@ -50,8 +50,11 @@
     <nav class="navbar">
         <div class="navbar-global-wrapper-ul">
             <ul class="navbar-wrapper-link">
-                <li><a href="#" data-target="gallery"></a><i class="fas fa-camera-retro"></i>
-                    <h3>Gallery</h3>
+                <li><a href="#" data-target="historique"></a><i class="fas fa-address-book"></i>
+                    <h3>Historique</h3>
+                </li>
+                <li><a href="#" data-target="instructeur"></a><i class="fas fa-user-tie"></i>
+                    <h3>Instructeurs</h3>
                 </li>
                 <li><a href="#" data-target="ppg"></a><i class="fas fa-running"></i>
                     <h3>PPG</h3>
@@ -59,18 +62,15 @@
                 <li><a href="#" data-target="evenement"></a><i class="fas fa-fire"></i>
                     <h3>Evenement</h3>
                 </li>
-                <li><a href="#" data-target="instructeur"></a><i class="fas fa-user-tie"></i>
-                    <h3>Instructeurs</h3>
-                </li>
-                <li><a href="#" data-target="historique"></a><i class="fas fa-address-book"></i>
-                    <h3>Historique</h3>
+                <li><a href="#" data-target="gallery"></a><i class="fas fa-camera-retro"></i>
+                    <h3>Gallery</h3>
                 </li>
             </ul>
         </div>
     </nav>
     <main class="main">
         <section class="main-section-wrapper">
-            <div class="main-gallery-bloc-wrapper main-bloc" id="gallery">
+            <div class="main-gallery-bloc-wrapper is-none main-bloc" id="gallery">
 
                 <div class="main-menu-collapse-wrapper">
                     <ul class="gallery-item" id="saison">
@@ -85,7 +85,7 @@
                     </ul>
                 </div>
 
-                <section class="gallery-grid-wrapper " id="saison-2020">
+                <section class="gallery-grid-wrapper" id="saison-2020">
                     <article>
                         <img src="asset/saison2019-2020/stage_feminin--3.jpg" alt="Stage féminin">
                         <h3>Stage féminin 2020</h3>
@@ -784,7 +784,7 @@
                 </div>
 
             </section>
-            <section class="is-none main-bloc" id="historique">
+            <section class="main-bloc" id="historique">
                 <div class="historique__wrapper">
                     <div class="historique__blocImg--left">
                         <img class="historique__img" src="asset/equipe.jpg" alt="equipe Haim Zut">
@@ -898,10 +898,10 @@
                             sert de modèle à ses élèves, en se concentrant avec une attention particulière sur les
                             enfants défavorisés auxquels il consacre son temps.
                         </p>
-                    </article> 
+                    </article>
                     <div class="meni__image gm__img--bottom">
                         <img class="meni__image--img " src="asset/Haim_ZutGM--2.webp" alt="GM Haim Zut">
-                    </div>     
+                    </div>
                 </div>
 
                 <div class="meni__wrapper">
@@ -971,7 +971,7 @@
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer is-none">
         <section class="footer-section-wrapper">
             <a class="link-createur" href="https://www.linkedin.com/in/romain-van-damme-1a7777177/">Site web réalisé par
                 Romain Van-Damme</a>
