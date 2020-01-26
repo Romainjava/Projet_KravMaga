@@ -188,8 +188,8 @@
 
 .redirection__bloc-img {
     position: relative;
-    width: 300px;
-    height: 354px;
+   max-width: 350px;
+   max-height: 470px;
 }
 
 .redirection__bloc-img::after {
